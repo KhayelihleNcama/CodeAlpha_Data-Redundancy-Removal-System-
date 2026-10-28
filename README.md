@@ -38,27 +38,6 @@ flowchart LR
     C -->|uncertain| E[Quarantine table]
     C -->|every decision| F[Audit log]
 ```
-
-Stack (edit to match yours): Python, AWS (SQS, Lambda or containers, RDS PostgreSQL).
-
-## Getting started
-
-```bash
-git clone https://github.com/<your-username>/<repo-name>.git
-cd <repo-name>
-pip install -r requirements.txt
-cp .env.example .env      # add your database credentials
-python -m app.main
-```
-
-## Usage
-
-```bash
-curl -X POST http://localhost:8000/records \
-  -H "Content-Type: application/json" \
-  -d '{"name": "John Smith", "address": "12 Main Street", "email": "john@example.com"}'
-```
-
 Example response:
 
 ```json
